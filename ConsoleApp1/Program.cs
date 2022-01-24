@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Ducks;
 
-namespace fejgkj
+namespace ConsoleApp1
 {
     internal class Program
     {
