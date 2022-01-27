@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DecoyDuck.cs" />
-    <Compile Include="IFyable.cs" />
+    <Compile Include="IFlyable.cs" />
     <Compile Include="IQuackeble.cs" />
     <Compile Include="RedHeadDuck.cs" />
     <Compile Include="MallardDuck.cs" />

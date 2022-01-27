@@ -22,9 +22,9 @@ namespace ConsoleApp1
             {
                 Console.WriteLine(duck.Swim());
                 Console.WriteLine(duck.Display());
-                if (duck is IFyable)
+                if (duck is IFlyable)
                 {
-                    Console.WriteLine((duck as IFyable).fly());
+                    Console.WriteLine((duck as IFlyable).fly());
                 }
                 if (duck is IQuackable)
                 {

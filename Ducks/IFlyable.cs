@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ducks
 {
-    public interface IFyable
+    public interface IFlyable
     {
         string fly();
     }
