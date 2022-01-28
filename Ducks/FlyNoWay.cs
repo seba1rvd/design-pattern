@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ducks
 {
-    public interface IFlyable
+    public class FlyNoWay : IFlyBehavior
     {
-        string fly();
+        public string fly()
+        {
+            return "..." + this.GetType();
+        }
     }
 }

@@ -7,29 +7,30 @@ using Ducks;
 
 namespace ConsoleApp1
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            Duck[] ducks = new Duck[]
+            Duck[] kryak = new Duck[]
             {
                 new MallardDuck(),
                 new RedHeadDuck(),
                 new RubberDuck(),
                 new DecoyDuck()
             };
-            foreach (Duck duck in ducks)
+            foreach (Duck krya in kryak)
             {
-                Console.WriteLine(duck.Swim());
-                Console.WriteLine(duck.Display());
-                if (duck is IFlyable)
+                Console.WriteLine(krya.Swim());
+                Console.WriteLine(krya.Display());
+                if (krya is IFlyBehavior)
                 {
-                    Console.WriteLine((duck as IFlyable).fly());
+                    Console.WriteLine((krya as IFlyBehavior).fly());
                 }
-                if (duck is IQuackable)
+                if (krya is IQuackBehavior)
                 {
-                    Console.WriteLine((duck as IQuackable).quack());
+                    Console.WriteLine((krya as IQuackBehavior).quack());
                 }
+                Console.WriteLine();
             }
             Console.ReadKey();
         }

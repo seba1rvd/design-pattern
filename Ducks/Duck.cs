@@ -8,10 +8,33 @@ namespace Ducks
 {
     public abstract class Duck
     {
+        protected IQuackBehavior quackBehavior;
+        protected IFlyBehavior flyBehavior;
+        public void setFlyBehavior(IFlyBehavior fb)
+        {
+            flyBehavior = fb;
+        }
+        public string Display()
+        {
+            return "Display" + this.GetType() + " " + this.flyBehavior.fly() + " " + this.quackBehavior.quack();
+        }
+        public void setQuackBehavior(IQuackBehavior qb)
+        {
+            quackBehavior = qb;
+        }
         public string Swim()
         {
-            return "swim" + "" + GetType();
+            return "Буль буль буль" + " " + this.GetType();
+
         }
-        public abstract string Display();
+        public string fly()
+        {
+            return flyBehavior.fly();
+        }
+        public string quack()
+        {
+            return quackBehavior.quack();
+        }
+
     }
 }

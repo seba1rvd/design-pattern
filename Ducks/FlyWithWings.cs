@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Ducks
 {
-    public class DecoyDuck : Duck
+    public class FlyWithWings : IFlyBehavior
     {
-        public DecoyDuck()
+        public string fly()
         {
-            flyBehavior = new FlyNoWay();
-            quackBehavior = new MuteQuack();
+            return "Хлоп хлоп хлоп" + this.GetType();
         }
     }
 }
