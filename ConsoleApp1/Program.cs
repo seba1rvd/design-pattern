@@ -11,27 +11,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Duck[] kryak = new Duck[]
+            Duck[] ducks = new Duck[]
             {
                 new MallardDuck(),
                 new RedHeadDuck(),
                 new RubberDuck(),
                 new DecoyDuck()
             };
-            foreach (Duck krya in kryak)
+
+            foreach (Duck duck in ducks)
             {
-                Console.WriteLine(krya.Swim());
-                Console.WriteLine(krya.Display());
-                if (krya is IFlyBehavior)
-                {
-                    Console.WriteLine((krya as IFlyBehavior).fly());
-                }
-                if (krya is IQuackBehavior)
-                {
-                    Console.WriteLine((krya as IQuackBehavior).quack());
-                }
+                Console.WriteLine(duck.Swim());
+                Console.WriteLine(duck.Display());
                 Console.WriteLine();
             }
+
             Console.ReadKey();
         }
     }
